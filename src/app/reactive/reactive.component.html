@@ -1,0 +1,15 @@
+<div class="container col-4">
+    <form [formGroup]="regForm" (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+        <label for="inputNombre" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="inputNombre" placeholder="Nombre" formControlName="nombre">
+        </div>
+        <div class="mb-3">
+        <label for="inputApellido" class="form-label">Apellido</label>
+        <input type="text" class="form-control" id="inputApellido" placeholder="Apellido" formControlName="apellido">
+        </div>
+        <button type="submit" class="btn btn-outline-success">Enviar</button>
+    </form>
+    <hr>
+    <pre>{{ regForm.value | json }}</pre>
+</div>
