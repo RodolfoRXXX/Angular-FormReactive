@@ -6,12 +6,14 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { CabeceraComponent } from './cabecera/cabecera.component';
 import { ReactiveComponent } from './reactive/reactive.component';
+import { ValidarReactiveComponent } from './validar-reactive/validar-reactive.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CabeceraComponent,
-    ReactiveComponent
+    ReactiveComponent,
+    ValidarReactiveComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,22 @@
+<div class="container col-4">
+    <fieldset>
+        <legend class="text-center">Formulario Reactivo con validación</legend>
+        <form [formGroup]="regFormValid" (ngSubmit)="onSubmit()">
+            <div class="mb-3">
+                <label for="inputNombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="inputNombre" placeholder="Nombre" formControlName="nombre" required>
+            </div>
+            <div class="mb-3">
+                <label for="inputApellido" class="form-label">Apellido</label>
+                <input type="text" class="form-control" id="inputApellido" placeholder="Apellido" formControlName="apellido" required>
+            </div>
+            <div class="mb-3">
+                <label for="inputEmail" class="form-label">Email</label>
+                <input type="text" class="form-control" id="inputEmail" placeholder="Email" formControlName="email" required>
+            </div>
+            <button type="submit" class="btn btn-outline-success" [disabled]="!regFormValid.valid">Enviar</button>
+        </form>
+    </fieldset>
+    <hr>
+    <pre>{{ regFormValid.value | json }}</pre>
+</div>
